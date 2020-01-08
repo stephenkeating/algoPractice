@@ -9,18 +9,28 @@
 
 function capitalize(str) {
 
-  let transformedStr = []
+  let capitalStr = str[0].toUpperCase()
 
-  for (let word of str.split(' ')) {
-    transformedStr.push(word[0].toUpperCase() + word.slice(1))
+  for (i = 1; i < str.length; i++) {
+    (str[i - 1] === ' ' ) ? capitalStr = capitalStr + str[i].toUpperCase() : capitalStr = capitalStr + str[i]
   }
 
-  return transformedStr.join(' ')
+  return capitalStr
+
 }
 
 module.exports = capitalize;
 
+// function capitalize(str) {
 
+//   let transformedStr = []
+
+//   for (let word of str.split(' ')) {
+//     transformedStr.push(word[0].toUpperCase() + word.slice(1))
+//   }
+
+//   return transformedStr.join(' ')
+// }
 
 // think about .slice
 
