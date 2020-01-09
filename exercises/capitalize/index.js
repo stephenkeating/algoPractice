@@ -46,7 +46,7 @@ module.exports = capitalize;
 //   for (word of words) {
 //     capitalWord = ''
 //     const first = word[0].toUpperCase()
-//     const rest = word.splice(1)
+//     const rest = word.slice(1)
 //     capitalWord = first + rest
 //     capitalStrArray.append(capitalWord)
 //   }
