@@ -29,9 +29,6 @@ function steps(n) {
   
   for (i = 1; i <= n; i++) {
     pounds = pounds + '#'
-    // for (k = n-i; k > 0; k--) {
-      // (spaces = spaces + " ") * n-i
-    // }
     console.log(pounds + spaces.repeat(n-i))
   }
   
@@ -39,3 +36,7 @@ function steps(n) {
 }
 
 module.exports = steps;
+ 
+// for (k = n-i; k > 0; k--) {
+  // (spaces = spaces + " ") * n-i
+// }
