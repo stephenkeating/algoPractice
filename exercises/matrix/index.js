@@ -32,15 +32,21 @@
 
 function matrix(n) {
 
-  let counter = 1
-  let startRow = 1
-  let startColumn = 1
-  let endRow = n
-  let endColumn = n
+  let results = [];
+
+  for (let i = 0; i < n; i++){
+    results.push([]);
+  }
+
+  let counter = 1;
+  let startRow = 0;
+  let startColumn = 0;
+  let endRow = n - 1;
+  let endColumn = n - 1;
 
   while (startColumn <= endColumn && startRow <= endRow)
-    for (let i = 0; i < endRow; ) {
-
+    for (let i = startColumn; i <= endColumn; i++) {
+      results[0]
     }
 
 }
