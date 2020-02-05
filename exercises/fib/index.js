@@ -8,6 +8,30 @@
 // Example:
 //   fib(4) === 3
 
-function fib(n) {}
+function fib(n) {
+
+  // recursive solution
+  if (n < 2) {
+    return n;
+  }
+
+  return fib(n - 1) + fib(n -2)
+
+}
 
 module.exports = fib;
+
+
+// function fib(n) {
+
+//   let fibArray = [0, 1]
+//   let counter = 2
+
+//   while (fibArray.length <= n) {
+//     fibArray[counter] = fibArray[counter - 1] + fibArray[counter - 2];
+//     counter++;
+//   }
+
+//   return fibArray[n];
+
+// }
