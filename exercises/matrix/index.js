@@ -44,11 +44,36 @@ function matrix(n) {
   let endRow = n - 1;
   let endColumn = n - 1;
 
-  while (startColumn <= endColumn && startRow <= endRow)
+  while (startColumn <= endColumn && startRow <= endRow) {
+    // start row
     for (let i = startColumn; i <= endColumn; i++) {
-      results[0]
+      results[startRow][i] = counter;
+      counter++;
     }
+    startRow++;
 
+    // end column
+    for (let i = startRow; i <= endRow; i++) {
+      results[i][endColumn] = counter;
+      counter++;
+    }
+    endColumn--;
+
+    // end row
+    for (let i = endColumn; i >= startColumn; i--) {
+      results[endRow][i] = counter;
+      counter++;
+    }
+    endRow--;
+
+    // start column
+    for (let i = endRow; i >= startRow; i--) {
+      results[i][startColumn] = counter;
+      counter++;
+    }
+    startColumn++;
+  }
+  return results;
 }
 
 module.exports = matrix;
