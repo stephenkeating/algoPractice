@@ -76,16 +76,26 @@ class LinkedList {
   }
 
   getAt (index) {
-    let node = this.head; 
-    if (index > this.size()) {
+    if (!this.head) {
       return null;
     }
-    let counter = 0
-    while (counter < index) {
+    let node = this.head; 
+    let counter = 0; 
+    while (node) {
+      if (counter === index) {
+        return node;
+      }
       node = node.next;
       counter++;
     }
-    return node;
+    return null;
+  }
+
+  removeAt (index) {
+    let node = this.getAt(index)
+    if (node) {
+
+    }
   }
 
 }
