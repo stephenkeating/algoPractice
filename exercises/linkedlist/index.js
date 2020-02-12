@@ -92,11 +92,19 @@ class LinkedList {
   }
 
   removeAt (index) {
-    let node = this.getAt(index)
-    if (node) {
-
+    if (this.head === null) {
+      return;
     }
+    if (index === 0) {
+      return this.head = this.head.next;
+    }
+    let previous = this.getAt(index - 1)
+    if (!previous || !previous.next) {
+      return;
+    }
+    previous.next = previous.next.next
   }
+
 
 }
 
