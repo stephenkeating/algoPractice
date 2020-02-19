@@ -92,19 +92,34 @@ class LinkedList {
   }
 
   removeAt (index) {
-    if (this.head === null) {
+    if (!this.head) {
       return;
     }
     if (index === 0) {
-      return this.head = this.head.next;
+      return  this.head = this.head.next;
     }
-    let previous = this.getAt(index - 1)
+    let previous = this.getAt(index - 1);
     if (!previous || !previous.next) {
       return;
     }
-    previous.next = previous.next.next
+    previous.next = previous.next.next; 
   }
 
+  insertAt (data, index) {
+    let node = new Node(data)
+    if (index === 0) {
+      if (!this.head) {
+        return this.head = node
+      } else {
+        node.next = this.head
+        return this.head = node
+      }
+    }
+    
+    let previous = this.getAt(index - 1) || this.getLast();
+    node.next = previous.next
+    previous.next = node
+  }
 
 }
 
