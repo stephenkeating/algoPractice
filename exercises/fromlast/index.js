@@ -15,8 +15,9 @@ function fromLast(list, n) {
   let slow = list.head;
   let fast = list.head;
 
-  for (i = 0; i < n; i++) {
+  while (n > 0) {
     fast = fast.next;
+    n--;
   }
 
   while (fast.next) {
