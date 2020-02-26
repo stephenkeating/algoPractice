@@ -31,12 +31,22 @@ class Tree {
     this.root = null
   }
 
-  traverseBF() {
-
+  traverseBF(fn) {
+    let arr = [this.root];
+    while (arr.length) {
+      let node = arr.shift();
+      fn(node);
+      arr.push(...node.children);
+    }
   }
   
-  traverseDF() {
-
+  traverseDF(fn) {
+    let arr = [this.root];
+    while (arr.length) {
+      let node = arr.shift();
+      fn(node)
+      arr.unshift(...node.children);
+    }
   }
 }
 
