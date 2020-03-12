@@ -28,3 +28,27 @@ function circular(list) {
 }
 
 module.exports = circular;
+
+
+// 1 - 2 - 3 - 4 - 5 (- 3 - 4 - 5)
+// 1 - 2 - 3 - 4 - 5 (- 4 - 5)
+// 1 - 2 - 3 - 4 - 5
+
+
+//// super inefficient method
+// function circular(list) {
+
+//   let node = list.getFirst()
+//   let arr = []
+
+//   while (node.next) {
+//     if (arr.includes(node)) {
+//       return true;
+//     } else {
+//       arr.push(node)
+//       node = node.next
+//     }
+//   }
+
+//   return false;
+// }
